@@ -1,7 +1,35 @@
 #!/usr/bin/env node
 
-console.log(`Zen mode is one-shotting a website to prod with SEO, blog and a beautiful responsive layout.
+const gradient = require('gradient-string');
+const chalk = require('chalk');
 
-Enter zen mode on https://pageai.pro
-`);
+const zenArt = `
+          .::::.
+        .::::::::.
+        :::::::::::
+      ':::::::::::..
+      ::::::::::::'
+        ':::::::'
+          '::'
+    ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+  ⣿⣿⣿    ⣿⣿    ⣿⣿⣿
+  ⣿⣿⣿    ⣿⣿    ⣿⣿⣿
+    ⣿⣿     ⣿⣿     ⣿⣿
+    ⣿⣿     ⣿⣿     ⣿⣿
+    ⣿⣿    ⣿⣿    ⣿⣿
+      ⣿    ⣿⣿⣿    ⣿
+          ⣿⣿⣿⣿
+          ⣿⣿⣿⣿⣿⣿
+        ⣿⣿⣿  ⣿⣿⣿
+`;
+
+const message = `${gradient.rainbow(zenArt)}
+${gradient.rainbow('Zen mode is one-shotting a website to prod with SEO, blog and a beautiful responsive layout.')}
+
+Enter zen mode on ${chalk.underline('https://pageai.pro')}
+`
+
+console.log(message);
 
